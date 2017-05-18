@@ -1,0 +1,124 @@
+<!DOCTYPE html><html>
+<head>
+	<title>PhotoSwipe</title>
+	<meta name="author" content="Code Computerlove - http://www.codecomputerlove.com/" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	
+	<link href="../lib/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.css" rel="stylesheet" type="text/css" />
+	<link href="jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="../photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="../lib/klass.min.js"></script>
+	<script type="text/javascript" src="../lib/jquery-1.6.2.min.js">
+    
+    </script>
+	<script type="text/javascript" src="../lib/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.js">
+	<script type="text/javascript" src="../code.photoswipe.jquery-2.0.2.min.js"></script>
+	
+	
+<script type="text/javascript">
+		
+		/*
+		 * IMPORTANT!!!
+		 * REMEMBER TO ADD  rel="external"  to your anchor tags. 
+		 * If you don't this will mess with how jQuery Mobile works
+		 */
+
+//jQuery versi
+
+
+function preventBehavior(e) 
+    { 
+      e.preventDefault(); 
+    };
+    document.addEventListener("touchmove", preventBehavior, false);
+		
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				
+				$('div.gallery-page').live('pageshow', function(e){
+						
+					// See if there is a PhotoSwipe instance associated with the page.
+					// For this demo I've assumed one page has one instance and the ID 
+					// for each instance is the same as the page ID.
+					//
+					// Of course, it's up to you how many instances per page and what
+					// ID naming convention you use!
+					var 
+						currentPage = $(e.target),
+						photoSwipeInstanceId = currentPage.attr('id'),
+						photoSwipeInstance = PhotoSwipe.getInstance(photoSwipeInstanceId)
+						options = {};
+					
+					if (typeof photoSwipeInstance === "undefined" || photoSwipeInstance === null) {
+						console.log('creating');
+						photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options, photoSwipeInstanceId);
+					}
+					
+					return true;
+					
+				})
+					
+			});
+		
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+	</script>
+
+
+	
+<style type="text/css">
+
+#apDiv1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+	text-align: left;
+}
+#apDiv2 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:2;
+	text-align: left;
+}
+.a {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div data-role="page" id="Home">
+
+<div data-role="header">
+		<a href="../index.html" target="_new"><img src="../Buttons/Back buton arrow.gif" alt="hello" width="15" height="17" align="texttop"> Back</a><h1>CONTACT US</h1>
+</div>
+	
+	
+<div data-role="content" >	
+		
+	<p>Do you have an interest in choral or orchestral music? Do you attend an International School? Do you have a passion for music? We would love to hear from you.</p>
+	<p><strong>Email us:</strong></p>
+	<p><a href="mailto:inquires@iscms.net">inquires@iscms.net</a><br>
+    <a href="mailto:festival@iscms.net">festival@iscms.net</a></p>
+	<p><strong>Blogs:</strong></p>
+	<p><a href="http://iscms.tumblr.com" target="_new">ISCMS Tumblr</a></p>
+	<p><strong>Registration 2012:</strong></p>
+	<p><a href="http://www.iscms.net/Registration.html" target="_new">Registration Form</a></p>
+</div>
+
+
+
+</div>
+
+
+	
+
+</div>
+
+</body>
+</html>

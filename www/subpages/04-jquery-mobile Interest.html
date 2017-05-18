@@ -1,0 +1,192 @@
+<!DOCTYPE html><html>
+<head>
+	<title>PhotoSwipe</title>
+	<meta name="author" content="Code Computerlove - http://www.codecomputerlove.com/" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	
+	<link href="../lib/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.css" rel="stylesheet" type="text/css" />
+	<link href="jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="../photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="../lib/klass.min.js"></script>
+	<script type="text/javascript" src="../lib/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="../lib/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.js"></script>
+	<script type="text/javascript" src="../code.photoswipe.jquery-2.0.2.min.js"></script>
+	
+	
+<script type="text/javascript">
+		
+		/*
+		 * IMPORTANT!!!
+		 * REMEMBER TO ADD  rel="external"  to your anchor tags. 
+		 * If you don't this will mess with how jQuery Mobile works
+		 */
+
+//jQuery versi
+		
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				
+				$('div.gallery-page').live('pageshow', function(e){
+						
+					// See if there is a PhotoSwipe instance associated with the page.
+					// For this demo I've assumed one page has one instance and the ID 
+					// for each instance is the same as the page ID.
+					//
+					// Of course, it's up to you how many instances per page and what
+					// ID naming convention you use!
+					var 
+						currentPage = $(e.target),
+						photoSwipeInstanceId = currentPage.attr('id'),
+						photoSwipeInstance = PhotoSwipe.getInstance(photoSwipeInstanceId)
+						options = {};
+					
+					if (typeof photoSwipeInstance === "undefined" || photoSwipeInstance === null) {
+						console.log('creating');
+						photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options, photoSwipeInstanceId);
+					}
+					
+					return true;
+					
+				})
+					
+			});
+		
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+	</script>
+
+<body style="-webkit-user-select: none;"> 
+	
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+	text-align: left;
+}
+#apDiv2 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:2;
+	text-align: left;
+}
+.a {
+	text-align: center;
+}
+.ad {
+	text-align: center;
+}
+HEllo {
+	font-size: 24px;
+}
+#Hewllo {
+	font-size: 24px;
+	text-align: center;
+}
+#nihamas {
+	text-align: center;
+}
+#adnwk {
+	text-align: center;
+}
+#nekwjf {
+	text-align: center;
+}
+#adwd {
+	text-align: center;
+}
+#SADDWD {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div data-role="page" id="Home">
+
+<div data-role="header">
+		<a href="../index.html" target="_new"><img src="../Buttons/Back buton arrow.gif" alt="hello" width="15" height="17" align="texttop"> Back</a>
+		<h1>INTEREST
+		  <style type="text/css">
+.numbers {
+    padding: 0px;
+    width: 45px;
+    text-align: center;
+    font-family: Arial;             
+    font-size: 28px;
+    font-weight: bold;    /* options are normal, bold, bolder, lighter */
+    font-style: normal;   /* options are normal or italic */
+    color: #FFFFFF;       /* change color using the hexadecimal color codes for HTML */
+}
+.title {    /* the styles below will affect the title under the numbers, i.e., "Days", "Hours", etc. */
+    border-style: none;
+    padding: 0px 0px 3px 0px;
+    width: 45px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;    /* options are normal, bold, bolder, lighter */
+    color: #FFFFFF;       /* change color using the hexadecimal color codes for HTML */
+}
+#mem {
+    width: 320px;
+    height: 80px;
+    border-style: ridge;
+    border-width: 3px;
+    border-color: #666666;       /* change color using the hexadecimal color codes for HTML */
+    background-color: #222222;   /* change color using the hexadecimal color codes for HTML */
+    margin: 0px auto;
+    position: relative;   /* leave as "relative" to keep timer centered on your page, or change to "absolute" then change the values of the "top" and "left" properties to position the timer */
+    top: 0px;            /* change to position the timer */
+    left: -17px;            /* change to position the timer; delete this property and it's value to keep timer centered on page */
+}
+#nomem {
+    width: 320px;
+    height: 80px;
+    border-style: ridge;
+    border-width: 3px;
+    border-color: #666666;       /* change color using the hexadecimal color codes for HTML */
+    background-color: #222222;   /* change color using the hexadecimal color codes for HTML */
+    margin: 0px auto;
+    position: relative;   /* leave as "relative" to keep timer centered on your page, or change to "absolute" then change the values of the "top" and "left" properties to position the timer */
+    top: 20px;            /* change to position the timer */
+    left: -17px;            /* change to position the timer; delete this property and it's value to keep timer centered on page */
+}
+#chance {
+    width: 320px;
+    height: 500px;
+    border-style: ridge;
+    border-width: 3px;
+    border-color: #666666;       /* change color using the hexadecimal color codes for HTML */
+    background-color: #222222;   /* change color using the hexadecimal color codes for HTML */
+    margin: 0px auto;
+    position: relative;   /* leave as "relative" to keep timer centered on your page, or change to "absolute" then change the values of the "top" and "left" properties to position the timer */
+    top: 39px;            /* change to position the timer */
+    left: -18.5px;            /* change to position the timer; delete this property and it's value to keep timer centered on page */
+}
+</style>
+
+        
+        </h1>
+</div>
+	
+	
+<div data-role="content" >
+  <p id="nihamas">If your are interested in getting involved in ISCMS, please visit our <a href="http://www.iscms.net/Registration.html" target="_new">Teacher &amp; Student Registration</a> site.</p>
+  <p id="nekwjf"><strong>Individual Participant Fee</strong></p>
+  <p><img src="images/Mem and Non-Mem.jpg" alt="ad" name="mem" width="320" height="80" id="mem"></p>
+  <p id="SADDWD"><strong>School Membership</strong></p>
+<p>ISCMS Member Schools are required to pay an annual fee of <strong>1500 HKD </strong>by 1st October each year. International Schools that wish to support the aims and development of ISCMS, are encouraged to apply to the Committee to become ISCMS Member Schools.</p>
+  <p>Email and ask us for payment information:</p>
+  <p><a href="mailto:inquiries@iscms.net" title="mailto:inquiries@iscms.net">inquiries@iscms.net</a></p>
+  <p>&nbsp;</p>
+  <p id="iagwefibiefbiae"><strong>What does it include?</strong></p>
+<p>The fee for Individual students and teachers who participate in the ISCMS Music Festival Beijing 2012 - <em>Lumen</em>, includes all of the following:<img src="images/opps.jpg" alt="ad" name="chance" width="320" height="500" id="chance"></p>
+</div>
+</body>
+</html>

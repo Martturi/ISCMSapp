@@ -1,0 +1,226 @@
+<!DOCTYPE html><html>
+<head>
+	<title>PhotoSwipe</title>
+	<meta name="author" content="Code Computerlove - http://www.codecomputerlove.com/" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	
+	<link href="../lib/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.css" rel="stylesheet" type="text/css" />
+	<link href="jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="../photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="../lib/klass.min.js"></script>
+	<script type="text/javascript" src="../lib/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="../lib/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.js"></script>
+	<script type="text/javascript" src="../code.photoswipe.jquery-2.0.2.min.js"></script>
+	
+	
+<script type="text/javascript">
+		
+		/*
+		 * IMPORTANT!!!
+		 * REMEMBER TO ADD  rel="external"  to your anchor tags. 
+		 * If you don't this will mess with how jQuery Mobile works
+		 */
+
+//jQuery versi
+
+function preventBehavior(e) 
+    { 
+      e.preventDefault(); 
+    };
+    document.addEventListener("touchmove", preventBehavior, false);
+		
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				
+				$('div.gallery-page').live('pageshow', function(e){
+						
+					// See if there is a PhotoSwipe instance associated with the page.
+					// For this demo I've assumed one page has one instance and the ID 
+					// for each instance is the same as the page ID.
+					//
+					// Of course, it's up to you how many instances per page and what
+					// ID naming convention you use!
+					var 
+						currentPage = $(e.target),
+						photoSwipeInstanceId = currentPage.attr('id'),
+						photoSwipeInstance = PhotoSwipe.getInstance(photoSwipeInstanceId)
+						options = {};
+					
+					if (typeof photoSwipeInstance === "undefined" || photoSwipeInstance === null) {
+						console.log('creating');
+						photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options, photoSwipeInstanceId);
+					}
+					
+					return true;
+					
+				})
+					
+			});
+		
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+	</script>
+
+<body style="-webkit-user-select: none;"> 
+	
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+	text-align: left;
+}
+#apDiv2 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:2;
+	text-align: left;
+}
+.a {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div data-role="page"  id="Home">
+
+<div data-role="header"><a href="../index.html" target="_new"><img src="../Buttons/Back buton arrow.gif" alt="hello" width="15" height="17" align="texttop"> Back</a>
+  <h1>PEOPLE</h1>
+</div>
+	
+	
+<div data-role="content" >	
+		
+	<p><span id="adwwdqdwd">These are the people involved in  ISCMS Music Festival - <em>Lumen</em></span> </p>
+	<p>Who do you want to look at?</p>		
+		
+	<ul data-role="listview" data-inset="true">
+<li><a href="#Gallery1">Artists</a></li> 
+			<li><a href="#Gallery3">Practitioners</a></li>
+	
+			<li><a href="#Gallery4">Committee</a></li>
+	</ul>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+</div>
+
+
+
+</div>
+
+
+<div data-role="page" data-add-back-btn="true" id="Gallery1" class="gallery-page">
+
+	<div data-role="header">
+		<h1>ARTISTS</h1>
+	</div>
+
+  <div data-role="content">	
+		
+	<ul class="gallery">
+		
+			<li>
+			  <div><a href="images/Artists/Karl Jenkins.jpg" rel="external"><img src="images/Artists/Karl JenkinsT.jpg" alt="                      KARL&nbsp; JENKINS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;A british musician and composer, Karl Jenkins is now the most performed living composer in the world. His recorded output has resulted in seventeen gold and platinum disk awards. He has been educated at Gowerton Grammar School, Cardiff University, and the Royal Academy of Music, London. He has composed a specially commissioned new choral work for the ISCMS Music Festival 2012 - Lumen, and will be acting as the Patron for the Festival." width="394" height="500" /></a></div>
+			</li>
+			<li><a href="images/Artists/Beverly Vaughn.jpg" rel="external"><img src="images/Artists/Beverly Vaughn.jpg" alt="BEVERLY&nbsp; VAUGHN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Beverly Vaughn is a native of Columbus, Ohio. She has completed a Master of Music degree in voice performance and the Doctor of Musical Arts degree in voice performance at the Ohio State University in Columbus. She has taught several different college music courses, has been involved in outreach programs such as Project Malawi, and has served as Minister of Music/organist for several churches. She will be one of the main artists at the ISCMS Music Festival 2012 - Lumen.
+                              " width="121%" height="177" /></a></li>
+			
+            <li><a href="images/Artists/Janet Barrett.jpg" rel="external"><img src="images/Artists/Janet BarrettT.jpg" alt="Dr. JANET&nbsp; BARRETT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Janet Barrett is an Associate Professor at the Bienen School of Music, Northwestern University.  She teaches courses in secondary music education, curriculum development, qualitative research methods, and interdisciplinary perspectives on music education. Barrett is currently chair of the Society for Music Teacher Education. She has also co-authored several books based on musical education. She will be offering professional development to ISCMS teachers during the upcoming ISCMS Music Festival 2012 - Lumen.
+
+                              " width="121%" height="177" /></a></li>
+                              
+                              <li> &nbsp; </li>
+                              
+             <li><a href="images/Artists/Maud Hickey.jpg" rel="external"><img src="images/Artists/Maud Hickey.jpg" alt="MAUD&nbsp; HICKEY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Maud Hickey is Associate Professor of Music Education at the Bienen School of Music, Northwestern University. Her research focus is children's compositions and improvisations, and the use of technology to facilitate these processes. Her most recent work involves composition and improvisation for at-risk students.   She is the author of chapters in several books and articles to do with musical education. Hickey is currently vice president of the International Society for Improvised Music and secretary for the College Music Society. She will be offering professional development to ISCMS teachers during the upcoming ISCMS Music Festival 2012 - Lumen.
+                              " width="121%" height="177" /></a></li>                 
+			
+    </ul>
+	
+	<p><img src="../Images Real/Photos Hybrid Instructions.jpg" width="279" height="104"></p>
+	<p>View <a href="http://www.iscms.net/Artists.html">Artists</a> for more information</p>
+  </div>
+	
+		<h4>&nbsp;</h4>
+</div>
+<div data-role="page" data-add-back-btn="true" id="Gallery2" class="gallery-page">
+
+	
+
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="Gallery3" class="gallery-page">
+
+	<div data-role="header">
+		<h1>PRACTITIONERS</h1>
+  </div>
+
+  <div data-role="content">	
+		
+<ul class="gallery">
+		
+			<li><a href="images/Prac/Adams.png" rel="external"><img src="images/Prac/AdamsT.png" alt=" Dr. MARTIN&nbsp; ADAMS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Martin Adams studied at Southampton University, and for a number of years was active as a composer and arranger of theatre music, and as a conductor of amateur and semi-professional choirs and orchestras. For three years he lectured at Leeds University, and in 1979 moved to Trinity College Dublin, where he is a Senior Lecturer, a Fellow of the college and head of the Music Department. He will be working as the Artistic Director of Repertoire and Development during the ISCMS Music Festival 2012 - Lumen, which will be his 5th ISCMS Festival." /></a></li>
+			
+            
+            <li><a href="images/Prac/Hasty.jpg" rel="external"><img src="images/Prac/HastyT.jpg" alt=" Dr. ROBERT&nbsp; HASTY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Dr Robert Hasty has worked as a teacher, adjudicator, clinician, violinist, and has conducted in several prestigious orchestras, including the La Primavera Orchestra and the Irvine Youth Symphony orchestra. He is currently a conductor of Chamber Orchestra, Philharmonia, and Summer Orchestra, and is a teacher of graduate and undergraduate conduction coerces. He will be acting as the Artistic Director of Orchestra during the ISCMS Music Festival 2012 - Lumen, which will be his 3rd ISCMS Festival." /></a></li>
+			<li><a href="images/Prac/christinatrulio.jpg" rel="external"><img src="images/Prac/TrulioT.jpg" alt=" CHRISTINA&nbsp; TRULIO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; A native Californian, Christina has lived in the Chicago area for ten years where she continues her career as a songwriter and guitar teacher, having included a detour to Boston where she received a degree in composition from Berklee College of Music. Christina has always been a songwriter, with her first ASCAP composition for a film The Boss's Son at the age of 17. In the early 90s, she had a platinum selling single in Germany. She will be working as a Practitioner during the ISCMS Music Festival 2012 - Lumen, which will be her 2nd ISCMS Festival." /></a></li>
+			
+            <li> &nbsp; </li>
+            
+		  <li><a href="images/Prac/David Curtin at piano.jpg" rel="external"><img src="images/Prac/CurtinT.jpg" alt=" Dr. DAVID&nbsp; CURTIN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;A native of Rochester, New York, pianist David Curtin earned his Doctor of Musical Arts degree from the University of Cincinnati College-Conservatory of Music, his Master of Music degree from the University of Louisville School of Music, and his Bachelor of Music and Bachelor of Arts (in English) from the State University of New York College at Fredonia. An international teacher and performer, Dr. Curtin has recently held piano master classes in Shanghai and Beijing, China. He will be acting as a Practitioner during the ISCMS Music Festival 2012 - Lumen, which will be his 3rd ISCMS Festival." /></a></li>
+			
+    </ul>
+    <p><img src="../Images Real/Photos Hybrid Instructions.jpg" width="279" height="104"></p>
+    <p>View <a href="http://www.iscms.net/Practitioners.html">Practitioners</a> for more information</p>
+  </div>
+	
+
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="Gallery4" class="gallery-page">
+
+	<div data-role="header">
+		<h1>COMMITTEE</h1>
+  </div>
+
+  <div data-role="content">	
+		
+<ul class="gallery">
+		
+			<li><a href="images/Comm/Oshea.jpg" rel="external"><img src="images/Comm/OsheaT.jpg" alt=" SHANE&nbsp; O'SHEA - Chairperson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; An Irish native, Shane has a music degree and Masters from Trinity College. He has conducted and been involved in choirs from a young age, conducting professional and semi-professional choirs and orchestras in Ireland and the UK. He is also the youngest person to have conducted in the National Concert Hall in Ireland. Shane founded ISCMS and hosted its first festival in 2008. He will be acting as the Chairperson of the ISCMS Music Festival 2012 - Lumen Committee." /></a></li>
+			<li><a href="images/Comm/GleesonFull.jpg" rel="external"><img src="images/Comm/Gleeson.jpg" alt=" CANICE&nbsp; GLEESON - Vice-Chairperson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Canice Gleeson comes from county Kilkenny, Ireland. He received his bachelor degree in music and a post graduate diploma in music education from the University College Cork.He completed his graduate studies in music at  Newcastle University and has studied conducting at New York University and The Juilliard School of Music. As a music educator, composer, arranger and conductor Canice has travelled the world, holding Head of Music and Performance positions at schools in Dublin, Rome and Tokyo. He will be acting as the Vice-Chairperson of the ISCMS Music Festival 2012 - Lumen Committee." /></a></li>
+			<li><a href="images/Comm/Dutton.jpg" rel="external"><img src="images/Comm/DuttonT.jpg" alt=" GERARD&nbsp; DUTTON - Secretary &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Prior to international teaching Gerard enjoyed an active career as a professional flautist. He has performed in Australia, New Zealand, Vietnam, Tonga, USA and China. He is a graduate from - and was also a lecturer in Flute at - the Queensland Conservatorium, Griffith University, Australia, and is currently studying for a Master of Music Education at Northwestern University, Chicago. He is also now teaching MYP and IB Diploma Music at Beijing BISS International School. Gerard has held office and served on the executive committees of a number of music-related associations. He will be acting as the Secretary of the ISCMS Music Festival 2012 - Lumen Committee." /></a></li>
+			<li><a href="images/Comm/Baker.png" rel="external"><img src="images/Comm/Baker.png" alt=" PAUL&nbsp; BAKER - Treasurer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Paul Barker - Treasurer
+Paul Barker is a music teacher and freelance composer who studied music in the UK. He now runs and directs music teaching at Kellett School, the British School in Hong Kong. Many of his works such as 'Roquiem' have been recently published and performed around the world and he has also written for several major events. He has been placed first in the UK Songwriting Contest and also represented Hong Kong with a first place award in the International Music Aid Competition. He will be acting as the Treasurer of the ISCMS Music Festival 2012 - Lumen Committee." /></a></li>
+			<li><a href="images/Comm/Jones.jpg" rel="external"><img src="images/Comm/Jones.png" alt=" DEBRA&nbsp; JONES - Committee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Originally from Dudley, UK, Debra trained in cello and recorder at the Welsh College of Music and Drama, specializing in Early Music Performance. Following graduation she worked as a freelance musician. After teaching in Wales and London for years, she moved to Hong Kong in 2002 to take up the post of Head of Music at South Island School. Debra is currently Chair of the Music Curriculum Group of the English Schools Foundation, organising Continuous Professional Development for the group and managing musical events. She will be a member of the ISCMS Music Festival 2012 - Lumen Committee." /></a></li>
+			<li><a href="images/Comm/Arnold.png" rel="external"><img src="images/Comm/Arnold.png" alt=" MELISSA&nbsp; ARNOLD - Committee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Melissa Arnold was originally a student of operatic performance, but upon realizing the joy of teaching music, she went back to school for a Masters of Education degree. She is originally from Richmond, Virginia, but has lived and taught throughout the East Coast of the USA; in Santo Domingo, Dominican Republic; and in Beijing, China. She currently is the Choral Director and teaches MYP Music at Western Academy of Beijing. Melissa also directs Beijing International Community Choir and performs with varied choral ensembles. She will be a member of the ISCMS Music Festival 2012 - Lumen Committee." /></a></li>
+    </ul>
+    <p><img src="../Images Real/Photos Hybrid Instructions.jpg" width="279" height="104"></p>
+    <p>View <a href="http://www.iscms.net/Committee.html">Committee</a> for more information</p>
+	</div>
+	
+
+</div>
+
+</body>
+</html>

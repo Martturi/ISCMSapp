@@ -1,0 +1,185 @@
+<!DOCTYPE html><html><head>
+	<title>PhotoSwipe</title>
+	<meta name="author" content="Code Computerlove - http://www.codecomputerlove.com/" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	
+	<link href="../lib/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.css" rel="stylesheet" type="text/css" />
+	<link href="jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="../photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="../lib/klass.min.js"></script>
+	<script type="text/javascript" src="../lib/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../lib/network.js"></script>
+	<script type="text/javascript" src="../lib/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.js"></script>
+	<script type="text/javascript" src="../code.photoswipe.jquery-2.0.2.min.js"></script>
+	
+
+
+    
+	
+<script type="text/javascript">
+
+
+
+
+function checkNetwork(){ 
+        if(navigator.onLine == false){ 
+                alert("The RSS Feed requires and active Internet Connection. Please turn on your Internet connection and try again."); 
+        } 
+} 
+
+
+
+
+
+$(document).ready(function() { 
+        checkNetwork(); 
+}); 
+
+
+
+
+
+
+		
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				
+				$('div.gallery-page').live('pageshow', function(e){
+			
+					var 
+						currentPage = $(e.target),
+						photoSwipeInstanceId = currentPage.attr('id'),
+						photoSwipeInstance = PhotoSwipe.getInstance(photoSwipeInstanceId)
+						options = {};
+					
+					if (typeof photoSwipeInstance === "undefined" || photoSwipeInstance === null) {
+						console.log('creating');
+						photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options, photoSwipeInstanceId);
+					}
+					
+					return true;
+					
+				})
+					
+			});
+		
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+		
+		</script>
+    
+    
+    
+<body style="-webkit-user-select: none;">     
+
+
+	
+<style type="text/css">
+
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
+#apDiv1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+	text-align: left;
+}
+#apDiv2 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:2;
+	text-align: left;
+}
+.a {
+	text-align: center;
+}
+.ad {
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div data-role="page" id="Home">
+
+<div data-role="header">
+		<a href="../index.html" target="_new"><img src="../Buttons/Back buton arrow.gif" alt="hello" width="15" height="17" align="texttop"> Back</a>
+		<h1>News
+        
+          <style type="text/css">
+	
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}		  
+		  
+.numbers {
+    padding: 0px;
+    width: 45px;
+    text-align: center;
+    font-family: Arial;             
+    font-size: 28px;
+    font-weight: bold;   
+    font-style: normal;   
+	color: #FFFFFF;      
+}
+.title {   
+    border-style: none;
+    padding: 0px 0px 3px 0px;
+    width: 45px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+#table {
+    width: 400px;
+    height: 70px;
+    border-style: ridge;
+    border-width: 3px;
+    border-color: #666666;
+    background-color: #222222;
+    margin: 0px auto;
+    position: relative;
+    top: 660px;
+    left: -40px;
+}
+
+
+
+</style>
+
+
+        
+        </h1>
+</div>
+
+	
+	
+<div data-role="content" >
+  <p>Can't have enough of ISCMS? Stay updated with all the latest information</p>
+</div>
+
+
+<script type="text/javascript" src="http://p3k.org/rss/proxy.r?textColor=black&amp;align=&amp;width=320&amp;fontFace=Helvetica&amp;url=http%3A%2F%2Fwww.rsspect.com%2Frss%2Fiscmsnewsandupdatesiphone.xml&amp;compact=&amp;frameColor=%23000000&amp;showXmlButton=&amp;boxFillColor=white&amp;_=1316090689552&amp;titleBarColor=%23333333&amp;maxItems=7&amp;titleBarTextColor=%23ffffff&amp;"></script>
+	
+  
+
+</div>
+
+	
+
+</div>
+
+
+
+
+</body>
+</html>
