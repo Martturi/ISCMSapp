@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DetectPhoneNumber</key>
+	<true/>
+	<key>TopActivityIndicator</key>
+	<string>gray</string>
+	<key>EnableLocation</key>
+	<false/>
+	<key>EnableAcceleration</key>
+	<true/>
+	<key>EnableViewportScale</key>
+	<true/>
+	<key>AutoHideSplashScreen</key>
+	<true/>
+	<key>ShowSplashScreenSpinner</key>
+	<true/>
+	<key>MediaPlaybackRequiresUserAction</key>
+	<false/>
+	<key>AllowInlineMediaPlayback</key>
+	<false/>
+	<key>ExternalHosts</key>
+	<array>
+		<string>*iscms.tumblr.com</string>
+		<string>*maps.google.com/maps?hl=en&amp;q=forbidden+city+concert+hall&amp;gs_upl=2071l2694l0l2877l5l4l0l0l0l0l0l0ll0l0&amp;um=1&amp;ie=UTF-8&amp;ei=1ZlxTpjwBOeWiQe32uGgBg&amp;sa=X&amp;oi=mode_link&amp;ct=mode&amp;cd=3&amp;ved=0CA8Q_AUoAg</string>
+		<string>*.maps.google.com.hk</string>
+		<string>*.iscms.net</string>
+		<string>*.p3k.org</string>
+		<string>*.maps.google.com</string>
+	</array>
+	<key>Plugins</key>
+	<dict>
+		<key>com.phonegap.accelerometer</key>
+		<string>PGAccelerometer</string>
+		<key>com.phonegap.camera</key>
+		<string>PGCamera</string>
+		<key>com.phonegap.connection</key>
+		<string>PGConnection</string>
+		<key>com.phonegap.contacts</key>
+		<string>PGContacts</string>
+		<key>com.phonegap.debugconsole</key>
+		<string>PGDebugConsole</string>
+		<key>com.phonegap.file</key>
+		<string>PGFile</string>
+		<key>com.phonegap.filetransfer</key>
+		<string>PGFileTransfer</string>
+		<key>com.phonegap.geolocation</key>
+		<string>PGLocation</string>
+		<key>com.phonegap.notification</key>
+		<string>PGNotification</string>
+		<key>com.phonegap.media</key>
+		<string>PGSound</string>
+		<key>com.phonegap.mediacapture</key>
+		<string>PGCapture</string>
+		<key>com.phonegap.splashscreen</key>
+		<string>PGSplashScreen</string>
+	</dict>
+</dict>
+</plist>
